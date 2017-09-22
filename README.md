@@ -1,7 +1,7 @@
 ---
-title: share
-date: 2017-09-20 10:23:56
-tags: [团队分享]
+title: 学习分享
+date: 2017-09-20
+tags: [工程化，工具]
 ---
 
 ## 为什么使用 Prettier ？
