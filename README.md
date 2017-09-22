@@ -4,23 +4,20 @@ date: 2017-09-20 10:23:56
 tags: [团队分享]
 ---
 
-## Why prettier ？
-统一团队的代码格式
+## 为什么使用 Prettier ？
 
-> It is generally accepted that having a common style guide is valuable for a project and team but getting there is a very painful and unrewarding process. People get very emotional around particular ways of writing code and nobody likes spending time writing and receiving nits.
+[Prettier](https://github.com/prettier/prettier) 是一个代码格式化工具，可用语统一团队的代码格式
 
+简单的命令行使用：
 ```js
 prettier --single-quote --no-semi --write "*.{js,css}"
 prettier --config .prettierrc --write "*.{js,css}"
 ```
 
 <b>和 ESLint 的区别：</b>
-Formatting rules
-Code-quality rules
+prettier 只负责代码格式部分，不涉及到代码质量部分
 
-prettier 只负责 Formatting rules
-
-结合 husky 和 lint-staged 使用：
+结合 [husky](https://github.com/typicode/husky) 和 [lint-staged](https://github.com/okonet/lint-staged) 使用：
 
 ```js
 "scripts": {
@@ -31,9 +28,6 @@ prettier 只负责 Formatting rules
   "*.{js,css,scss}": ["prettier --write", "git add"]
 }
 ```
-
-Live Demo：
-演示 husky 和 lint-staged
 
 ##  nodejs 调试
 
@@ -47,18 +41,13 @@ node --inspect-brk index.js
 ```
 
 打开调试面板方式：
-
 - chrome://inspect
 - DevTool
 
 调试 .bin 目录：
-
 ```js
 node --inspect-brk node_modules/.bin/webpack 
-```
-
-Live Demo：
-调试 hlj 后台 yarn dist:webpack 命令后报错问题
+``` 
 
 [doc](https://nodejs.org/dist/latest-v8.x/docs/api/debugger.html#debugger_v8_inspector_integration_for_node_js)
 
@@ -74,11 +63,8 @@ Live Demo：
 - angular-cli
 
 开发 CLI 常用库：
-[commander.js](https://github.com/tj/commander.js)
-[Inquirer.js](https://github.com/SBoudrias/Inquirer.js)
-
-Live Demo：
-以 react_antd 工程为例，写一个简易的脚手架，用于创建一个基于 SearchBar 和 Table 的模块模版
+- [commander.js](https://github.com/tj/commander.js)
+- [Inquirer.js](https://github.com/SBoudrias/Inquirer.js)
 
 ## Transform.now.sh
 
